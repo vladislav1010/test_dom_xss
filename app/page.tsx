@@ -16,3 +16,9 @@ export default function Home({
     ></div>
   );
 }
+
+// available sources - searchParams
+// each location where your string appears within the DOM
+// identify context
+// refine input
+// %3Cimg%20src%3D1%20onerror%3D'console.log(1)'%3E
