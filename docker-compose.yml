@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    env_file: .env.local
+    ports:
+      - "5432:5432"
+    networks:
+      - my
+  web:
+    build: .
+    container_name: "test_dom_xss_web"
+    ports:
+      - "3001:3000"
+    env_file: .env.local
+    volumes:
+      - "./prisma:/myapp/prisma"
+      - "./pages:/myapp/pages"
+      - "./app:/myapp/app"
+      - "./next.config.js:/myapp/next.config.js"
+      - "./tsconfig.json:/myapp/tsconfig.json"
+      - "./package.json:/myapp/package.json"
+      - "./node_modules/.prisma:/myapp/node_modules/.prisma"
+      - "./public:/myapp/public"
+    networks:
+      - my
+    
+networks:
+  my:
+    

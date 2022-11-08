@@ -1,0 +1,8 @@
+/node_modules
+*.log
+.DS_Store
+/.next
+.vscode
+.env.local
+Dockerfile
+docker-compose.yml

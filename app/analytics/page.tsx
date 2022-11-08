@@ -4,11 +4,7 @@ import React from "react";
 
 // https://portswigger.net/web-security/dom-based/link-manipulation#:~:text=Causing%20the%20user%20to%20be%20redirected%20to%20an%20arbitrary%20external%20URL%2C%20which%20could%20facilitate%20a%20phishing%20attack.
 
-export default function Analytics({
-  searchParams,
-}: {
-  searchParams: { siteUrl: string };
-}) {
+export default function Analytics({ searchParams }: any) {
   const [siteUrlDraft, setSiteUrlDraft] = React.useState("");
 
   const getSearch = (siteUrl: string) => {
