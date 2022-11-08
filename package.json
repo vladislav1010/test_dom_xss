@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "prisma generate && prisma migrate deploy && prisma db seed",
-    "docker": "docker-compose up -d",
-    "docker:setup": "docker exec test_dom_xss_web npm run setup"
+    "setup": "prisma generate && prisma migrate deploy",
+    "docker": "docker compose up -d"
   },
   "dependencies": {
     "@prisma/client": "4.5.0",
